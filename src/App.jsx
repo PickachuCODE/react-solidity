@@ -1,7 +1,11 @@
 import React from 'react'
+import { ethers } from "ethers";
 import './App.css'
 
 function App() {
+ const wave = () => {
+    
+  }
   return (
     <>
       <div className="hero">
@@ -18,7 +22,7 @@ function App() {
               <div className="subText">
                 <p>
                   Hi, this is my first buildspace project. <br />
-                  View the source code <a href="">here</a>
+                  View the source code <a href="https://github.com/PickachuCODE/react-solidity">here</a>
                 </p>
               </div>
             </div>
@@ -30,7 +34,7 @@ function App() {
                   waiting on hardhat
                 </div>
               </div>
-              <div className="buttonWrap">
+              <div className="buttonWrap"  onClick={wave}>
                 <input type="button" value="Click to Wave👋" />
               </div>
             </div>
