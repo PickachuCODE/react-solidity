@@ -1,13 +1,135 @@
+*{
+  margin:0;
+  padding:0;
+}
 body {
-  margin: 0;
+  margin: 0;background: black;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.hero{
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.sectionText{
+  display: grid;
+  align-items: flex-end;
+}
+.subText p{
+  color: white;
+  font-size: larger;
+}
+a{
+  text-decoration: none;
+  color: rgb(42, 248, 90);
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1{
+  font-size: 74px;
+  font-weight: 800;
+    background: linear-gradient(90deg, rgb(15, 255, 247) 0%, rgb(42, 248, 90) 100%);
+margin-bottom: 20px;
+  background-clip: text;
+  width:fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+span{
+  font-size: 74px;
+    background: initial;
+  background-clip: text;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+.buttonWrap{
+  display: flex;
+}
+.buttonWrap input{
+  padding: 14px 24px;
+  border-radius: 1000px;
+  font-size: medium;
+  font-weight: 600;
+  border: none;
+}
+.buttonWrap input:hover{
+  box-shadow: -2px 2px rgb(42, 248, 90);
+}
+.wraper{
+  display: grid;
+  grid-template-columns:3fr 2fr;
+}
+.feedSection{
+  display: grid;
+  align-items: flex-end;
+}
+.feedBox{
+  width: 90%;
+  margin-bottom: 18px;
+}
+.box{
+  padding: 10px 25px 12px 25px;
+  background: rgba(255, 255, 255, 0.663);
+box-shadow: 0 8px 32px 0 rgba(135, 40, 31, 0.37);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 100%;
+  border-radius: 90px;
+}
+
+
+
+@media only screen and (max-width: 1150px) {
+  .hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 100px;
+  margin-right: 0px;
+  }
+.feedSection{
+  margin-top: 50px;
+}
+  .buttonWrap input{
+    font-size: medium;
+    font-weight: 600;
+  }
+  h1{
+  font-size: 74px;
+}
+.wraper{
+  display: block;
+}
+.feedSection{
+  display: block;
+}
+}
+@media only screen and (max-width: 650px) {
+  .hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+  }
+  .buttonWrap input{
+    font-size: medium;
+    font-weight: 600;
+  }
+  h1{
+  font-size: 60px;
+}
+.wraper{
+  display: block;
+}
+
 }

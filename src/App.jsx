@@ -1,44 +1,43 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+import React from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+      <div className="hero">
+        <div className="wraper">
+          <div className="sectionText">
+            <div className="sectionTextwrap">
+              <div className="mainText">
+                <h1 style={{display: 'inline',}}>
+                  React </h1>
+                <span>🚀</span> <br />
+              <h1>Web3 Project
+                </h1>
+              </div>
+              <div className="subText">
+                <p>
+                  Hi, this is my first buildspace project. <br />
+                  View the source code <a href="">here</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="feedSection">
+            <div className="feedwrap">
+              <div className="feedBox">
+                <div className="box">
+                  waiting on hardhat
+                </div>
+              </div>
+              <div className="buttonWrap">
+                <input type="button" value="Click to Wave👋" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
 
