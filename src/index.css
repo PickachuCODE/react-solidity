@@ -74,15 +74,15 @@ span{
   margin-bottom: 18px;
 }
 .box{
-  padding: 10px 25px 12px 25px;
+  padding: 10px 25px 12px ;
   background: rgba(255, 255, 255, 0.663);
 box-shadow: 0 8px 32px 0 rgba(135, 40, 31, 0.37);
 backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
   width: 100%;
-  border-radius: 90px;
+  max-height: 200px;
+  overflow-y: scroll;
 }
 
 

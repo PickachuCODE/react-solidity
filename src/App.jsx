@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 function App() {
   const [currentAccount, setCurrentAccount] = useState("");
   const [allWaves, setAllWaves] = useState([]);
+  const [totalWaves, setTotalWaves] = useState(0)
   const contractAddress = "0x1F0959EC5bD06A74fd059b2B5621b84EB71Bd5Bf";
   /**
    * Create a variable here that references the abi content!
@@ -81,6 +82,7 @@ function App() {
         console.log("Mined -- ", waveTxn.hash);
 
         count = await wavePortalContract.getTotalWaves();
+        setTotalWaves(count)
         console.log("Retrieved total wave count...", count.toNumber());
       } else {
         console.log("Ethereum object doesn't exist!");
@@ -173,7 +175,7 @@ function App() {
           <div className="feedSection">
             <div className="feedwrap">
               <div className="feedBox">
-                <div>
+                <div className="box">
                   {allWaves.map((wave, index) => {
                     return (
                       <div key={index} style={{ backgroundColor: "OldLace", marginTop: "16px", padding: "8px" }}>
@@ -189,9 +191,9 @@ function App() {
         * If there is no currentAccount render this button
         */}
                 {!currentAccount && (
-                  <input style={{ display: 'block', }} type="button" value="Connect Wallet" className="waveButton" onClick={connectWallet} />
+                  <input style={{ display: 'block', marginRight: '50px' }} type="button" value="Connect Wallet" className="waveButton" onClick={connectWallet} />
                 )}
-                <input style={{display: 'block', marginLeft: '50px'}} type="button" value="Click to Wave👋" />
+                <input style={{ display: 'block' }} type="button" value={`${ totalWaves } waves: Click to Wave👋`} />
 
               </div>
             </div>
