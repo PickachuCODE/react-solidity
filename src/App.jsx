@@ -110,6 +110,7 @@ function App() {
         });
 
         setAllWaves(wavesCleaned);
+        setTotalWaves(await wavePortalContract.getTotalWaves())
       } else {
         console.log("Ethereum object doesn't exist!");
       }
