@@ -173,7 +173,7 @@ function App() {
           <div className="feedSection">
             <div className="feedwrap">
               <div className="feedBox">
-                <div className="box">
+                <div>
                   {allWaves.map((wave, index) => {
                     return (
                       <div key={index} style={{ backgroundColor: "OldLace", marginTop: "16px", padding: "8px" }}>
